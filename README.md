@@ -18,3 +18,17 @@
 * [Visual Studio Code](https://code.visualstudio.com/download)
 * Extension Prettier (Tìm trên mục extension ở VS Code rồi tìm cách cài đặt, khi lưu file extension sẽ tự căn chỉnh code cho mình)
 * [Github Desktop](https://desktop.github.com/)
+
+## Dán PR từ repo gốc sang
+* Repo nguồn: [Saphira](https://github.com/dwngh/saphira)
+* Giải thích:
+    * Ở repo nguồn, mỗi một PR sẽ ứng với một branch
+    * Việc Dán PR từ repo gốc sang chính là đem code của branch ứng với PR đó sang repo mới
+* Các bước:
+    * Tạo branch tương ứng với branch ở PR được giao ở repo mới (VD: PR [#8](https://github.com/dwngh/saphira/pull/8) của repo cũ có branch tương ứng ```07-init-front-end```)
+    * Kéo code từ branch trên ở repo cũ về máy, sau đó copy sang thư mục của repo mới (Lưu ý: Trừ folder ```node_modules```) 
+        * VD: Kéo code từ [đây](https://github.com/dwngh/saphira/tree/07-init-front_end) về máy
+    * Commit thay đổi vừa rồi vào branch tương ứng ở repo mới
+    * Tạo PR ở repo mới, để cho nhanh ta có thể copy y hệt nội dung ở PR cũ sang PR mới
+    * Sau đó add reviewer là ```dwngh``` và một người ngẫu nhiên nữa
+    * Lướt xuống cuối, thay vì merge thông thường ta chọn **Squash and merge**
